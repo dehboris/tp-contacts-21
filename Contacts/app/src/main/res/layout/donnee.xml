@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearData">
+
+    <ImageView
+        android:id="@+id/contactImage"
+        android:layout_width="match_parent"
+        android:layout_height="199dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/default_avatar" />
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:hint="Nom"
+        android:inputType="text"
+        android:textColorHint="#F6E7E7"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/editprename"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editsexe"
+        android:layout_marginBottom="10dp"
+        android:hint="Prénom"
+        android:inputType="text"
+        android:textColorHint="#F6E7E7"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/editsexe"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editface"
+        android:layout_marginBottom="0dp"
+        android:hint="Sexe"
+        android:inputType="text"
+        android:textColorHint="#F6E7E7"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/editface"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editnum"
+        android:layout_marginBottom="2dp"
+        android:hint="Facebook"
+        android:inputType="text"
+        android:textColorHint="#F6E7E7"
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/editnum"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Enregistrer"
+        android:hint="Number"
+        android:inputType="text"
+        android:textColorHint="#F6E7E7"
+        android:textSize="19sp" />
+
+    <Button
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Enregistrer"
+        android:text="Enregister"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="86dp"
+        android:layout_marginRight="45dp"
+        android:background="#ffffff"
+        android:textColor="#673AB7"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
