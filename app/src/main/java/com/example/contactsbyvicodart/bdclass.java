@@ -15,10 +15,11 @@ public class bdclass extends SQLiteOpenHelper {
 
     private  static final int VERSION=2;
 
-    private  static final String DB_NAME= "amical";
+    private  static final String DB_NAME= "lescontacts";
 
-    private  static final String CONTACT_TABLE= "con";
+    private  static final String CONTACT_TABLE= "mescontacts";
     private  static final String ID= "id";
+    private  static final String IMG= "img";
     private  static final String NOM= "nom";
     private  static final String PHENOM = "phenom";
     private  static final String SEX = "sex";
@@ -34,7 +35,7 @@ public class bdclass extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-           String CREATE_CONTACT_TABLE= "CREATE TABLE  " + CONTACT_TABLE+ " ( "+ ID +  " integer PRIMARY KEY autoincrement," +NOM+ " TEXT," +PHENOM+ " TEXT," +SEX+ " TEXT," +NUM+ " TEXT," +EMAIL+ " TEXT," +FACEBOOK+ " TEXT)";
+           String CREATE_CONTACT_TABLE= "CREATE TABLE  " + CONTACT_TABLE+ " ( "+ ID +  " integer PRIMARY KEY autoincrement," + IMG +  " integer," +NOM+ " TEXT," +PHENOM+ " TEXT," +SEX+ " TEXT," +NUM+ " TEXT," +EMAIL+ " TEXT," +FACEBOOK+ " TEXT)";
            sqLiteDatabase.execSQL(CREATE_CONTACT_TABLE);
     }
 
@@ -50,7 +51,7 @@ public class bdclass extends SQLiteOpenHelper {
     public void addContact(Contact contact){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values= new ContentValues();
-
+        values.put(IMG,contact.getImg());
         values.put(NOM,contact.getNom());
         values.put(PHENOM,contact.getPhenom());
         values.put(SEX,contact.getSex());
@@ -67,7 +68,7 @@ public class bdclass extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(
                 CONTACT_TABLE,
-                new String[]{ID, NOM, PHENOM, SEX, NUM, EMAIL, FACEBOOK},
+                new String[]{ID, IMG, NOM, PHENOM, SEX, NUM, EMAIL, FACEBOOK},
                 ID + "=?",
                 new String[]{String.valueOf(id)},
                 null, null, null, null
@@ -78,12 +79,13 @@ public class bdclass extends SQLiteOpenHelper {
             cursor.moveToFirst();
             contact = new Contact(
                     Integer.parseInt(cursor.getString(0)),
-                    cursor.getString(1),
+                    Integer.parseInt(cursor.getString(1)),
                     cursor.getString(2),
                     cursor.getString(3),
                     cursor.getString(4),
                     cursor.getString(5),
-                    cursor.getString(6)
+                    cursor.getString(6),
+                    cursor.getString(7)
             );
             return  contact;
         }else{
@@ -102,12 +104,13 @@ public class bdclass extends SQLiteOpenHelper {
                 Contact contact = new Contact();
 
                 contact.setId(Integer.parseInt(cursor.getString(0)));
-                contact.setNom(cursor.getString(1));
-                contact.setPhenom(cursor.getString(2));
-                contact.setSex(cursor.getString(3));
-                contact.setNum(cursor.getString(4));
-                contact.setEmail(cursor.getString(5));
-                contact.setFacebook(cursor.getString(6));
+                contact.setImg(Integer.parseInt(cursor.getString(1)));
+                contact.setNom(cursor.getString(2));
+                contact.setPhenom(cursor.getString(3));
+                contact.setSex(cursor.getString(4));
+                contact.setNum(cursor.getString(5));
+                contact.setEmail(cursor.getString(6));
+                contact.setFacebook(cursor.getString(7));
 
                 contacts.add(contact);
             }while(cursor.moveToNext());

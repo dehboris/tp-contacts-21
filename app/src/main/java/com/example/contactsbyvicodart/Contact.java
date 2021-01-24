@@ -1,11 +1,12 @@
 package com.example.contactsbyvicodart;
 
 public class Contact {
-    int id;
+    int id,img;
     String nom,phenom,sex,num,email,facebook;
 
-    public Contact(int id, String nom, String phenom, String sex, String num, String email,String facebook) {
+    public Contact(int id,int img, String nom, String phenom, String sex, String num, String email,String facebook) {
         this.id = id;
+        this.img = img;
         this.nom = nom;
         this.phenom = phenom;
         this.sex = sex;
@@ -62,6 +63,14 @@ public class Contact {
         this.email = email;
     }
 
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
+    }
+
     public String getFacebook() {
         return facebook;
     }
@@ -70,7 +79,8 @@ public class Contact {
         this.facebook = facebook;
     }
 
-    public Contact(String nom, String phenom, String sex, String num, String email, String facebook) {
+    public Contact(int img,String nom, String phenom, String sex, String num, String email, String facebook) {
+        this.img = img;
         this.nom = nom;
         this.phenom = phenom;
         this.sex = sex;

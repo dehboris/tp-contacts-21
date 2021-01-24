@@ -47,16 +47,31 @@
             android:hint="@string/prenom"
             android:autofillHints=""
             tools:ignore="LabelFor" />
+        <Spinner
+            android:id="@+id/sexes"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/sexe"
+            android:autofillHints=""
+            tools:ignore="LabelFor"/>
+
+
 
         <EditText
-            android:id="@+id/sexe"
+            android:id="@+id/img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="185dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textWebEditText"
+            android:visibility="invisible"
             android:hint="@string/sexe"
             android:autofillHints=""
             tools:ignore="LabelFor" />
@@ -69,7 +84,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="230dp"
             android:ems="10"
-            android:inputType="phone"
+            android:inputType="number"
             android:hint="@string/num"
             android:autofillHints=""
             tools:ignore="LabelFor" />

@@ -9,15 +9,32 @@
 
     <string name="num">Numero</string>
 
+    <string name="msgh">Ecrivez votre message</string>
+
     <string name="email">Email</string>
 
     <string name="facebook">Facebook</string>
 
     <string name="ajouter">Enregistrer</string>
 
+    <string name="envoyer">Envoyer</string>
+
     <string name="titre">Ajouter Contacts</string>
+
+    <string name="np">Ajouter Contacts</string>
+
+    <string name="numo">Ajouter Contacts</string>
+
+    <string name="em">Ajouter Contacts</string>
+
+    <string name="fac">Ajouter Contacts</string>
+
 
     <string name="ti"></string>
 
+    <string-array name="sexesm">
+        <item>Masculin</item>
+        <item>Feminin</item>
+    </string-array>
 
 </resources>
