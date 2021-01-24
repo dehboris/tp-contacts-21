@@ -21,10 +21,6 @@ public class Enregistrement extends AppCompatActivity implements View.OnClickLis
 
     private Button mAnswerButton1;
     private Button mAnswerButton2;
-    public static final String BUNDLE_EXTRA_SCORE1 = "BUNDLE_EXTRA_SCORE";
-    public static final String BUNDLE_EXTRA_SCORE2 = "BUNDLE_EXTRA_SCORE";
-    public static final String BUNDLE_EXTRA_SCORE3 = "BUNDLE_EXTRA_SCORE";
-    public static final String BUNDLE_EXTRA_SCORE4 = "BUNDLE_EXTRA_SCORE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,21 +69,29 @@ public class Enregistrement extends AppCompatActivity implements View.OnClickLis
         int responseIndex = (int) v.getTag();
         if (responseIndex==0)
             finish();
-        else
+        else if (responseIndex==1)
         {
              String nom = mNameInput1.getText().toString();
              String prenom = mNameInput2.getText().toString();
              String sexe = mNameInput3.getText().toString();
              String telephone = mNameInput4.getText().toString();
-             Toast.makeText(this, "Enregistrement réussie", Toast.LENGTH_SHORT).show();
-            Intent intent1 = new Intent(Enregistrement.this, MainActivity.class);
-            intent1.putExtra("nom", nom);
-            intent1.putExtra("prenom", prenom);
-            intent1.putExtra("sexe", sexe);
-            intent1.putExtra("telephone", telephone);
-            // démarrer une autre activité et recevoir un résultat
-            //startActivityForResult(enregistrementIntent,ENREGISTREMENT_REQUEST_CODE);
-            startActivity(intent1);
+
+            if (nom.isEmpty() && telephone.isEmpty())
+            {
+                Toast.makeText(this, "Veuillez remplir au moins un champ", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Enregistrement réussie", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(Enregistrement.this, MainActivity.class);
+                intent1.putExtra("nom", nom);
+                intent1.putExtra("prenom", prenom);
+                intent1.putExtra("sexe", sexe);
+                intent1.putExtra("telephone", telephone);
+                // démarrer une autre activité et recevoir un résultat
+                //startActivityForResult(enregistrementIntent,ENREGISTREMENT_REQUEST_CODE);
+                startActivity(intent1);
+            }
         }
     }
 }

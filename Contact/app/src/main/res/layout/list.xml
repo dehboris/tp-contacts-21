@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,10 +22,10 @@
 
         <ImageView
             android:layout_margin="10dp"
-            android:src="@drawable/ic_launcher_background"
-            android:id="@+id/imageview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:src="@drawable/ic_perm_identity_24px"
+            android:id="@+id/profil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
             <LinearLayout
                 android:layout_weight="1"
                 android:gravity="center"
@@ -34,16 +33,16 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/textName"
+                    android:id="@+id/prenom"
                     android:textColor="#000"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Movie Name"/>
+                    android:text="Nom"/>
                 <TextView
-                    android:id="@+id/textdate"
+                    android:id="@+id/telephone"
                     android:textColor="#000"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -56,6 +55,7 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 
 
