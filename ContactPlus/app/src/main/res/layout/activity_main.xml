@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+   
+    android:orientation="vertical"
+
+    tools:context=".MainActivity"
+    android:weightSum="1" android:layout_height="@dimen/cardview_compat_inset_shadow">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="410dp"
+        android:layout_weight="0.58"
+        android:id="@+id/listView">
+
+
+
+
+    </ListView>
+
+    <Button
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Add Contacts"
+        android:id="@+id/contactAddButton"
+        android:background="#000000"
+        android:textColor="#ff0016"
+        android:textStyle="bold"/>
+
+</LinearLayout>
