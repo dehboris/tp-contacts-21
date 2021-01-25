@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Contacts</string>
+
+    <string name="nom">Nom</string>
+
+    <string name="prenom">Prenom</string>
+
+    <string name="sexe">Sexe</string>
+
+    <string name="num">Numero</string>
+
+    <string name="ajouter">Enregistrer</string>
+
+    <string name="titre">Ajouter</string>
+
+    <string name="ti"></string>
+
+
+</resources>
