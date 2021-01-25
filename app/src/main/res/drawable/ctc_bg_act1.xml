@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ctc_bg1"
+    android:shape="rectangle">
+
+    <size
+        android:width="1160px"
+        android:height="30dp" />
+
+    <solid
+        android:color="@color/white" />
+
+    <stroke
+        android:width="2px"
+        android:color="@color/black" />
+</shape>
